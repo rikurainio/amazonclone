@@ -3,6 +3,7 @@ import styled from "styled-components"
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import RoomIcon from '@material-ui/icons/Room';
+import { Link } from "react-router-dom"
 
 
 function Header(){
@@ -49,9 +50,12 @@ function Header(){
                 </HeaderOption>
 
                 <HeaderOptionCart>
-                    <ShoppingCartIcon />
-                    <CartCount> 4 </CartCount>
+                    <Link to="cart">
+                        <ShoppingCartIcon />
+                        <CartCount> 4 </CartCount>
+                    </Link>  
                 </HeaderOptionCart>
+            
 
 
             </HeaderNavItems>
@@ -135,6 +139,14 @@ const HeaderOptionCart = styled.div`
     display: flex;
     align-items: center;
     padding-right: 9px;
+
+    a {
+        display: flex;
+        align-items: center;
+        padding-right: 9px;
+        color: white;
+        text-decoration: none;
+    }
 `
 
 const CartCount = styled.div`
