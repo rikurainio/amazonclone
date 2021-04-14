@@ -84,6 +84,8 @@ const OptionLineTwo = styled.div`
 const HeaderSearch = styled.div`
     display: flex;
     flex-grow: 1;
+    height: 40px;
+    border-radius: 4px;
 `
 
 const HeaderSearchInput = styled.input`
@@ -91,6 +93,13 @@ const HeaderSearchInput = styled.input`
 `
 
 const HeaderSearchIconContainer = styled.div`
+    background-color: #febd69;
+    width: 45px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    alignt-items: center;
+    
 `
 
 const HeaderNavItems = styled.div`
