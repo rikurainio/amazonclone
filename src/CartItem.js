@@ -20,10 +20,9 @@ function CartItem({ id, item }) {
                 </CartItemInfoTop>
                 <CartItemInfoBottom>
                     <CartItemQuantityContainer>
-                        <select>
+                        <select value={item.quantity}>
                             {options}
                         </select>
-                        {item.quantity}
                     </CartItemQuantityContainer>
                     <CartItemDeleteContainer>Delete</CartItemDeleteContainer>
                 </CartItemInfoBottom>
