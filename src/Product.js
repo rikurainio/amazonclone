@@ -2,19 +2,23 @@ import React from 'react'
 import styled from "styled-components"
 
 
-function Product() {
+function Product(props) {
+
     return (
         <Container>
             <Title>
-                Oneplus Nord N100 Smartphone (Midnight Frost)
+                {props.title}
             </Title>
             <Price>
-                149€
+                {props.price}€
             </Price>
             <Rating>
-                ⭐⭐⭐⭐⭐
+                {
+                    Array(props.rating)
+                            .fill(<p>⭐</p>)
+                }
             </Rating>
-            <Image src="https://www.gigantti.fi/image/dv_web_D180001002578713/243529/oneplus-nord-n100-aelypuhelin-midnight-frost.jpg?$digital220x220$"/>
+            <Image src={props.image}/>
             
             <ActionSection>
                 <AddToCartButton>
@@ -46,6 +50,7 @@ const Price = styled.span`
 `
 
 const Rating = styled.div`
+    display: flex;
 `
 
 const Image = styled.img`
