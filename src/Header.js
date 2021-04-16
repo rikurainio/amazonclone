@@ -6,7 +6,18 @@ import RoomIcon from '@material-ui/icons/Room';
 import { Link } from "react-router-dom"
 
 
-function Header(){
+function Header({ cartItems }){
+
+    const getCount = () => {
+        let count = 0;
+
+        //loop through all cart items and sum quantities
+        cartItems.forEach((item) => {
+            count += item.product.quantity;
+        })
+        return count;
+    }
+
     return(
         <Container>
             <HeaderLogo>
@@ -52,7 +63,7 @@ function Header(){
                 <HeaderOptionCart>
                     <Link to="cart">
                         <ShoppingCartIcon />
-                        <CartCount> 4 </CartCount>
+                        <CartCount>{getCount()}</CartCount>
                     </Link>  
                 </HeaderOptionCart>
             

@@ -32,7 +32,7 @@ function App() {
 
     <Router>
       <div className="App">
-        <Header />
+        <Header cartItems={cartItems}/>
 
         <Switch>
           <Route path="/cart">
