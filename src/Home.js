@@ -55,7 +55,7 @@ const Container = styled.div`
 `
 
 const Banner = styled.div`
-    background-image: url(https://i.imgur.com/SYHeuYM.jpg);
+    //background-image: url(https://i.imgur.com/SYHeuYM.jpg);
     min-height: 600px;
     background-position: center;
     background-size: cover;
