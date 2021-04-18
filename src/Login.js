@@ -15,7 +15,10 @@ function Login({ setUser }) {
                     email: user.email,
                     photo: user.photoURL
                 }
+
+                //set User state and save user to browser localStorage
                 setUser(newUser);
+                localStorage.setItem('user', JSON.stringify(newUser))
             })
             .catch((err) => {
                 alert(err.message)
@@ -43,10 +46,11 @@ const Container = styled.div`
     place-items: center;
 `
 const Content = styled.div`
+    margin-top: 100px;
     padding: 100px;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0px 1px 5px grey;
+    box-shadow: 0 1px 5px grey;
     text-align: center;
 `
 const Logo = styled.img`
