@@ -4,6 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import RoomIcon from '@material-ui/icons/Room';
 import { Link } from "react-router-dom"
+import StoreIcon from '@material-ui/icons/Store';
 
 
 function Header({ cartItems, user, signOut }){
@@ -21,7 +22,9 @@ function Header({ cartItems, user, signOut }){
     return(
         <Container>
             <HeaderLogo>
-                <img src={"https://rdwgroup.com/wp-content/uploads/2013/08/Amazon-800x450-1.jpg"}/>
+                <Link to="/">
+                    <StoreIcon />
+                </Link>
             </HeaderLogo>
 
             <HeaderOptionAddress>
@@ -76,11 +79,16 @@ function Header({ cartItems, user, signOut }){
 }
 
 const Container = styled.div`
+    a {
+        color: white;
+    }
+
     height: 60px;
-    background-color: #0F1111;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 3px solid black;
 
     color: white;
 `
@@ -93,7 +101,7 @@ const HeaderLogo = styled.div`
 `
 
 const HeaderOptionAddress = styled.div`
-    padding-left: 9px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
 `
@@ -129,7 +137,9 @@ const HeaderSearchInput = styled.input`
 `
 
 const HeaderSearchIconContainer = styled.div`
-    background-color: #febd69;
+    background-color: #fff3d8;
+    background-color: #ffc1c1;
+    background-color: ghostwhite;
     width: 45px;
     color: black;
     display: flex;

@@ -1,5 +1,6 @@
 
 import {useState, useEffect} from "react"
+import StoreIcon from '@material-ui/icons/Store';
 import logo from './logo.svg';
 import './App.css';
 import Header from "./Header"
@@ -26,8 +27,10 @@ function App() {
 
   const signOut = () => {
     //sign out from auth db and reset user to null
+    //also remove user from browser localStorage
     auth.signOut()
       .then(() => {
+        localStorage.removeItem('user');
         setUser(null);
       })
   }

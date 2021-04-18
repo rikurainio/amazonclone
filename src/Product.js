@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import {db} from "./firebase"
+import StarRateIcon from '@material-ui/icons/StarRate';
 
 function Product({name, price, rating, image, id}) {
 
@@ -40,7 +41,7 @@ function Product({name, price, rating, image, id}) {
                 {
                     Array(rating)
                         .fill()
-                        .map(rating => <p>⭐</p>)
+                        .map(rating => <StarRateIcon />)
                 }
             </Rating>
             <Image src={image}/>
@@ -56,7 +57,8 @@ function Product({name, price, rating, image, id}) {
 }
 
 const Container = styled.div`
-    background-color: white;
+    border-radius: 3px;
+    background-color: WHITE;
     z-index: 100;
     flex: 1;
     padding: 20px;
@@ -81,14 +83,17 @@ const Rating = styled.div`
 const Image = styled.img`
     max-height: 200px;
     object-fit: contain;
+    
+    
 `
 
 const AddToCartButton = styled.button`
-    widht: 100px;
+    width: 100px;
     height: 30px;
-    background-color: #f0c14b;
-    border: 2px solid #a88734;
-    border-radius: 2px;
+    background-color: #ffc1c1;
+    background-color: ghostwhite;
+    border: 2px solid black;
+    border-radius: 3px;
     cursor: pointer;
 `
 
