@@ -7,9 +7,11 @@ import Cart from "./Cart"
 import Home from "./Home"
 import {BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import {db} from "./firebase"
-
+import Login from "./Login"
+import styled from "styled-components"
 
 function App() {
+  const [user, setUser] = useState(null);
   const [cartItems, setCartItems] = useState([]);
 
   const getCartItems = () => {
@@ -31,22 +33,27 @@ function App() {
   return (
 
     <Router>
-      <div className="App">
-        <Header cartItems={cartItems}/>
-
-        <Switch>
-          <Route path="/cart">
-            <Cart cartItems={cartItems}/>
-          </Route>
-
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      {!user ?
+        (<Login setUser={setUser}/>)
+        :(<Container>
+            <Header cartItems={cartItems} user={user}/>
+    
+            <Switch>
+              <Route path="/cart">
+                <Cart cartItems={cartItems}/>
+              </Route>
+    
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Container>)}
   </Router>
     
   );
 }
+
+const Container = styled.div`
+`
 
 export default App;

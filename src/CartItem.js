@@ -8,6 +8,10 @@ function CartItem({ id, item }) {
         options.push(<option value={i}> Qty: {i}</option>)
     }
 
+    const deleteItem = (e) => {
+        e.preventDefault()
+        db.collection("cartItems").doc(id).delete();
+    }
 
     const changeQuantity = (newQuantity) => {
         db.collection("cartItems").doc(id).update({
@@ -35,7 +39,7 @@ function CartItem({ id, item }) {
                             {options}
                         </select>
                     </CartItemQuantityContainer>
-                    <CartItemDeleteContainer>Delete</CartItemDeleteContainer>
+                    <CartItemDeleteContainer onClick={deleteItem}>Delete</CartItemDeleteContainer>
                 </CartItemInfoBottom>
             </CartItemInfo>
 
