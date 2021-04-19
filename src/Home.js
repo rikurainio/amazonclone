@@ -29,8 +29,13 @@ function Home() {
 
     return (
         <Container>
+            <ContainerFilter>
+
+            </ContainerFilter>
             <Banner>
-                <PhonesTitle>Phones</PhonesTitle>
+                <PhonesTitle>
+                    <h1>Phones</h1>
+                </PhonesTitle>
             </Banner>
             <Content>
                 {
@@ -57,6 +62,12 @@ const Container = styled.div`
 const PhonesTitle = styled.h1`
     color: white;
     margin-top: -500px;
+
+    display: grid;
+    place-items: center;
+`
+
+const ContainerFilter = styled.div`
 `
 
 const Banner = styled.div`
