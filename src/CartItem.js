@@ -53,7 +53,7 @@ const Container = styled.div`
     padding-top: 12px;
     padding-bottom: 12px;
     display: flex;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid black;
 `
 
 const ImageContainer = styled.div`
@@ -73,7 +73,7 @@ const CartItemInfo = styled.div`
     flex-grow: 1;
 `
 const CartItemInfoTop = styled.div`
-    color: #007185;
+    color: black;
     h2 {
         font-size: 18px;
     }
@@ -85,8 +85,8 @@ const CartItemInfoBottom = styled.div`
 `
 const CartItemQuantityContainer = styled.div`
     select {
-        border-radius: 7px;
-        background-color: #F0F2F2;
+        border-radius: 4px;
+        background-color: ghostwhite;
         padding: 8px;
         box-shadow: 0 2px 5px rgba(15, 17, 17,0.15);
 
@@ -96,7 +96,7 @@ const CartItemQuantityContainer = styled.div`
     }
 `
 const CartItemDeleteContainer = styled.div`
-    color: #007185;
+    color: black;
     margin-left: 16px;
     cursor: pointer;
 `
