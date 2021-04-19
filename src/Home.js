@@ -74,9 +74,10 @@ const Banner = styled.div`
 `
 
 const Content = styled.div`
+    flex-wrap: wrap;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: -350px;
+    margin-top: -300px;
     z-index: 100;
     display: flex;
 `
