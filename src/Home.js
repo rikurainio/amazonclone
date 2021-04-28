@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import Product from "./Product"
+import Navbar from "./Navbar"
+
 import { db } from "./firebase"
 import { useState, useEffect } from "react"
 
@@ -30,8 +32,11 @@ function Home() {
     return (
         <Container>
             <ContainerFilter>
-
             </ContainerFilter>
+
+            <Navbar>
+            </Navbar>
+
             <Banner>
                 <PhonesTitle>
                     <h1>Phones</h1>

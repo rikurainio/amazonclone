@@ -28,8 +28,9 @@ function Login({ setUser }) {
     return (
         <Container>
             <Content>
-                <Logo src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1000px-Amazon_logo.svg.png"/>
-                <h1> Sign in</h1>
+                <Logo src="https://cdn.pixabay.com/photo/2016/12/21/16/34/shopping-cart-1923313_960_720.png"/>
+                <h1> Sign in to
+                    online store</h1>
                 <LoginButton onClick={signIn}>
                     Sign in with google
                 </LoginButton>
@@ -59,9 +60,9 @@ const Logo = styled.img`
 `
 const LoginButton = styled.button`
     margin-top: 50px;
-    background-color: #f0c14b;
+    background-color: #dedede;
     height: 40px;
-    border: 2px solid #a88734;
+    border: 2px solid black;
     padding: 4px 8px;
     cursor: pointer;
 `

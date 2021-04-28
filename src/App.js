@@ -1,6 +1,5 @@
 
 import {useState, useEffect} from "react"
-import StoreIcon from '@material-ui/icons/Store';
 import logo from './logo.svg';
 import './App.css';
 import Header from "./Header"
@@ -60,7 +59,6 @@ function App() {
             </Switch>
           </Container>)}
   </Router>
-    
   );
 }
 
